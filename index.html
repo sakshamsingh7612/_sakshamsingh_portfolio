@@ -6,75 +6,121 @@
 <title>Saksham Singh | Portfolio</title>
 
 <style>
-body {
+
+/* RESET */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Navbar */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
 nav {
-    background: #111;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     padding: 15px;
-    position: fixed;
-    width: 100%;
+    background: rgba(0,0,0,0.7);
+    position: sticky;
     top: 0;
 }
 
 nav a {
     color: white;
-    margin: 15px;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Sections */
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* SECTION FIX (NO EXTRA GAP) */
 section {
-    padding: 80px 20px;
-    min-height: 100vh;
+    padding: 60px 10%;
 }
 
-/* Home */
+/* HOME */
 #home {
-    background: linear-gradient(to right, #1f4037, #99f2c8);
-    color: white;
     text-align: center;
+    padding: 120px 10%;
 }
 
-h1 {
-    font-size: 40px;
+#home h1 {
+    font-size: 50px;
 }
 
-/* Cards */
+#home p {
+    font-size: 20px;
+    color: #38bdf8;
+}
+
+/* CARDS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .card {
-    background: #f4f4f4;
+    background: #1e293b;
     padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
+    flex: 1 1 300px;
+    transition: 0.3s;
 }
 
-/* Skills */
+.card:hover {
+    transform: translateY(-8px);
+    background: #334155;
+}
+
+/* SKILLS */
 .skills span {
-    background: #007BFF;
-    color: white;
-    padding: 8px;
-    margin: 5px;
     display: inline-block;
-    border-radius: 5px;
+    background: #38bdf8;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
-/* Footer */
+/* HEADINGS */
+h2 {
+    margin-bottom: 20px;
+    border-left: 5px solid #38bdf8;
+    padding-left: 10px;
+}
+
+/* LINKS */
+a {
+    color: #38bdf8;
+}
+
+/* CONTACT */
+#contact p {
+    margin: 8px 0;
+}
+
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #111;
-    color: white;
+    padding: 15px;
+    background: #020617;
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -84,97 +130,88 @@ footer {
 <a href="#contact">Contact</a>
 </nav>
 
-<!-- Home -->
+<!-- HOME -->
 <section id="home">
 <h1>Saksham Singh</h1>
 <p>Aspiring Data Analyst</p>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 <p>
-I am an aspiring Data Analyst currently pursuing B.Tech, with a strong interest in data-driven decision making.
-I have hands-on experience with Python, SQL, and data visualization tools like Power BI.
-I enjoy solving real-world business problems using data analysis and building interactive dashboards.
-My goal is to grow in the field of data analytics and contribute to impactful projects.
+I am an aspiring Data Analyst currently pursuing B.Tech, with a strong interest in solving real-world problems using data.
+I have hands-on experience in Python, SQL, and Power BI for data analysis and visualization.
+I enjoy building dashboards and extracting insights that help in decision-making.
 </p>
 </section>
 
-<!-- Skills -->
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 
-<div class="skills">
 <h3>Programming</h3>
+<div class="skills">
 <span>Python</span>
+</div>
 
 <h3>Tools</h3>
-<span>NumPy</span>
-<span>Pandas</span>
-<span>Matplotlib</span>
-<span>Seaborn</span>
-<span>Excel</span>
-<span>Power BI</span>
+<div class="skills">
+<span>NumPy</span><span>Pandas</span><span>Matplotlib</span>
+<span>Seaborn</span><span>Excel</span><span>Power BI</span>
+</div>
 
 <h3>Databases</h3>
+<div class="skills">
 <span>SQL</span>
+</div>
 
 <h3>Soft Skills</h3>
-<span>Communication</span>
-<span>Problem Solving</span>
+<div class="skills">
+<span>Communication</span><span>Problem Solving</span>
 </div>
 
 </section>
 
-<!-- Projects -->
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
+<div class="container">
 <div class="card">
 <h3>Pizza Sales Dashboard</h3>
 <p>
-Developed an interactive dashboard using SQL and Power BI to analyze pizza sales data.
-The project provides insights such as total revenue, top-selling pizzas, and sales trends.
-It helps businesses make data-driven decisions to improve performance.
+Built an interactive dashboard using SQL & Power BI to analyze sales trends,
+top products, and revenue insights.
 </p>
 <a href="https://github.com/sakshamsingh7612" target="_blank">View Project</a>
 </div>
+</div>
 
 </section>
 
-<!-- Certificates -->
+<!-- CERTIFICATES -->
 <section id="certificates">
 <h2>Certificates</h2>
 
+<div class="container">
 <div class="card">
 <h3>Python with Data Science and MySQL</h3>
-<p>Completed from Sheriyans Coding School</p>
-<img src="Data_Science_certification.jpeg" width="300">
+<p>Sheriyans Coding School</p>
+<img src="Data_Science_certification.jpeg" width="100%" style="border-radius:10px;">
+</div>
 </div>
 
 </section>
 
-<!-- Education -->
-<section id="education">
-<h2>Education</h2>
-
-<div class="card">
-<h3>B.Tech (Pursuing)</h3>
-<p>Sagar Institute of Research and Technology - Excellence</p>
-<p>3rd Year</p>
-</div>
-
-</section>
-
-<!-- Contact -->
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
 
 <p>📞 9555568743</p>
 <p>📧 singhsaksham287@gmail.com</p>
-<p>LinkedIn: <a href="https://linkedin.com/in/saksham-singh06" target="_blank">saksham-singh06</a></p>
-<p>GitHub: <a href="https://github.com/sakshamsingh7612" target="_blank">sakshamsingh7612</a></p>
+<p><a href="https://linkedin.com/in/saksham-singh06" target="_blank">LinkedIn</a></p>
+<p><a href="https://github.com/sakshamsingh7612" target="_blank">GitHub</a></p>
 
 </section>
 
